@@ -80,6 +80,10 @@
     var activeTarget = this.activeTarget
     var i
 
+    if (offsets && offsets.length > 0) {
+        scrollTop += offsets[0];
+    }
+
     if (scrollTop >= maxScroll) {
       return activeTarget != (i = targets.last()[0]) && this.activate(i)
     }
